@@ -12,7 +12,7 @@ test.describe("Validate sending messages", () => {
   test("User can send a message", async ({ page }) => {
     await expect(pageObjectManager.hudlHomePage.messagesIcon).toBeVisible();
     await pageObjectManager.hudlHomePage.messagesIcon.click();
-    await expect(page).toHaveURL("https://app.hudl.com/messaging");
+    await expect(page).toHaveURL('https://app.hudl.com/messaging');
     await expect(pageObjectManager.messagingPage.newMessageButton).toBeVisible();
     await pageObjectManager.messagingPage.newMessageButton.click();
     // Click the search box and type 'No Name'

@@ -3,5 +3,8 @@
     "invalidPasswordError": {
         "selector": "#error-element-password",
         "text": "Incorrect username or password."
-    }
+    },
+    "sentMessageSelector": "div.str-chat__message-text-inner[data-testid=\"message-text-inner-wrapper\"] p",
+    "videoTitleSelector": "p.u-text--small.u-text--contrast._itemTitle_78i4e_133",
+    "videoTitleText": "Asma"
 }

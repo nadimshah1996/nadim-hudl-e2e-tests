@@ -10,7 +10,7 @@ test.describe("Validate Hudl Search Box", () => {
     const context = await browser.newContext();
     page = await context.newPage();
     pageObjectManager = new PageObjectManager(page);
-    await page.goto("/home");
+    await page.goto('/home');
     const searchText = "soccer highlights";
     await expect(pageObjectManager.hudlHomePage.searchBox).toBeVisible();
     await pageObjectManager.hudlHomePage.searchBox.fill(searchText);
@@ -18,7 +18,7 @@ test.describe("Validate Hudl Search Box", () => {
     const result = pageObjectManager.hudlHomePage.searchRow.filter({hasText: "Soccer Highlights",});
     await expect(result).toBeVisible();
     await Promise.all([result.click()]);
-    await expect(page).toHaveURL("https://www.hudl.com/page/soccer-highlights");
+    await expect(page).toHaveURL('https://www.hudl.com/page/soccer-highlights');
   });
 
   test.afterAll(async () => {
@@ -51,13 +51,13 @@ test.describe("Validate Hudl Search Box", () => {
   test("Verify videos can be opened", async () => {
     await expect(pageObjectManager.hudlSportsPage.videoTab).toBeVisible();
     await pageObjectManager.hudlSportsPage.videoTab.first().click();
-    await expect(page).toHaveURL("https://www.hudl.com/page/soccer-highlights/videos");
+    await expect(page).toHaveURL('https://www.hudl.com/page/soccer-highlights/videos');
     await expect(pageObjectManager.hudlSportsPage.videos.first()).toBeVisible();
     await pageObjectManager.hudlSportsPage.videos.first().click();
   });
 
   test('Verify user can navigate back to the home page', async () => {
     await pageObjectManager.hudlHomePage.homepageTab.click();
-    await expect(page).toHaveURL("https://www.hudl.com/home");
+    await expect(page).toHaveURL('https://www.hudl.com/home');
   });
 });

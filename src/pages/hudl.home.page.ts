@@ -8,6 +8,7 @@ export class HudlHomePage {
     globalUserMenu: Locator;
     logOutButton: Locator;
     messagesIcon: Locator;
+    libraryTab: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -17,5 +18,6 @@ export class HudlHomePage {
         this.globalUserMenu = page.locator('.hui-globalusermenu');
         this.logOutButton = page.getByRole('link', { name: 'Log Out' });  
         this.messagesIcon = page.getByRole('link', { name: 'messages' }).first();
+        this.libraryTab = page.locator('[data-qa-id="webnav-primarynav-video"]');
     }
 }
