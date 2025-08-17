@@ -1,4 +1,7 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 export const Credentials = {
-  username: 'nadimshah1996@gmail.com',
-  password: 'P@ssword!1'
+  username: process.env.HUDL_USERNAME || "",
+  password: process.env.HUDL_PASSWORD || "",
 };

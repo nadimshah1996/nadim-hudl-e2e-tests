@@ -2,6 +2,8 @@ import { FullConfig } from '@playwright/test';
 import { Credentials } from '../setup/credentials';
 import { chromium } from 'playwright';
 import { PageObjectManager } from '../pages/page-object-manager';
+import dotenv from 'dotenv';
+dotenv.config();
 
 async function globalSetup(config: FullConfig) {
   const { baseURL } = config.projects[0].use;

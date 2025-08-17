@@ -18,6 +18,8 @@ export class SignInPage {
     async signIn(userName: string, password: string) {
         await this.userName.waitFor({ state: 'visible' });
         await this.userName.fill(userName);
+        await this.continue.click();
+        await this.password.waitFor({ state: 'visible' });
         await this.password.fill(password);
         await this.continue.click();
     }
