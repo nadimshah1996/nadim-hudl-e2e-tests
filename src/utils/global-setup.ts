@@ -1,4 +1,3 @@
-
 import { FullConfig } from '@playwright/test';
 import { Credentials } from '../setup/credentials';
 import { chromium } from 'playwright';
@@ -11,7 +10,6 @@ async function globalSetup(config: FullConfig) {
 
   // Go to login page
   await page.goto(`${baseURL}/login`);
-
   const pageObjectManager = new PageObjectManager(page);
   const signInPage = pageObjectManager.getSignInPage();
   await signInPage.userName.waitFor({ state: 'visible' });
