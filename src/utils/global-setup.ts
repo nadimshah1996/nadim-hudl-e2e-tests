@@ -17,7 +17,7 @@ async function globalSetup(config: FullConfig) {
   await signInPage.userName.waitFor({ state: 'visible' });
   await signInPage.userName.fill(Credentials.username);
   await signInPage.continue.click();
-  await signInPage.password.waitFor({ state: 'visible' });
+  await signInPage.password.waitFor({ state: 'visible', timeout: 15000 });
   await signInPage.password.fill(Credentials.password);
   await signInPage.continue.click();
 

@@ -8,7 +8,7 @@ const test = base.extend({
 });
 
 const hudlLoginUrl = "https://www.hudl.com/login";
-const invalidUsername = "invaliduser@example.com";
+const invalidUsername = "invaliduser1@example.com";
 const invalidPassword = "wrongpassword123";
 
 test("Invalid login shows error message", async ({ page }) => {
