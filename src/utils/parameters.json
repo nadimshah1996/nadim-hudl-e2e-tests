@@ -1,0 +1,7 @@
+{
+    "headlineSelector": ".uni-headline--1",
+    "invalidPasswordError": {
+        "selector": "#error-element-password",
+        "text": "Incorrect username or password."
+    }
+}
